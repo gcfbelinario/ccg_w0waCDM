@@ -5,6 +5,6 @@ source venv/bin/active
 echo "Generating plots..."
 
 # run python script
-python3 -u plot.py
+python3 -u aux/plot.py
 
 echo "Done..."
