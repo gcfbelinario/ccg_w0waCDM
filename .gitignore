@@ -1,2 +1,3 @@
 cobaya_packages/
 .DS_Store/
+.gitignore/.DS_store
