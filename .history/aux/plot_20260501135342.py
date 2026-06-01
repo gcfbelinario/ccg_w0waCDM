@@ -16,19 +16,18 @@ chain4 = 'chains/CMB-SPA+PP+DESI'      # CMB-SPA + PP + DESI
 
 # load and plot samples
 try:
-    samples0 = loadMCSamples(chain0, settings={'ignore_rows':burn_in})
-    #samples1 = loadMCSamples(chain1, settings={'ignore_rows':burn_in})
+    #samples0 = loadMCSamples(chain0, settings={'ignore_rows':burn_in})
+    samples1 = loadMCSamples(chain1, settings={'ignore_rows':burn_in})
     #samples2 = loadMCSamples(chain2, settings={'ignore_rows':burn_in})
     #samples3 = loadMCSamples(chain3, settings={'ignore_rows':burn_in})
     #samples4 = loadMCSamples(chain4, settings={'ignore_rows':burn_in})
 
     g = gdplt.get_subplot_plotter()
-    g.triangle_plot([samples0], 
+    g.triangle_plot([samples1], 
                     ['H0','ombh2','omch2','w','wa','sigma8'],
-                    #['H0','ombh2','omch2','w','wa'],
                     filled=True,
                     legend_labels=['CMB-SPA'],
-		            param_limits={})
+		    param_limits={'wa':(-5,5)})
 
     plt.legend() 
 
